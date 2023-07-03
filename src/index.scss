@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background-image: url("../src/assets/images/ppback.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  padding: 60px 30px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 17px -5px #a2a0a0;
+    // background-color: #00000080;
+    background-color: transparent;
+    // background-color: #aca4a47a;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    // // padding: 20px 50px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .container {
+      flex-direction: row;
+      overflow: hidden;
+    }
+  }
+}
+
+.appDark {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.406);
+  color: #fff;
+
+  &--light {
+    background-color: #ffffffbd;
+    color: black;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appDark {
+    padding: 40px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  text-decoration: none;
+}
+// FONTS //
+
+//AVERIA //
+@font-face {
+  font-family: "averia libre";
+  src: url(assets/fonts/averia.ttf) format("truetype");
+}
+
+// FRANK RUHL LIBRE //
+@font-face {
+  font-family: "frankRuhl light";
+  src: url(assets/fonts/FrankRuhlLibre-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "frankRuhl regular";
+  src: url(assets/fonts/FrankRuhlLibre-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "frankRuhl Medium";
+  src: url(assets/fonts/FrankRuhlLibre-Medium.ttf) format("truetype");
+}
+
+// BEBAS NEUE //
+@font-face {
+  font-family: "Bebas Neue regular";
+  src: url(assets/fonts/BebasNeue-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "muli bold";
+  src: url(assets/fonts/Mulish-VariableFont_wght.ttf) format("truetype");
+}

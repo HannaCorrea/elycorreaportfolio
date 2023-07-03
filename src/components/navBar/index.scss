@@ -1,0 +1,223 @@
+.nav-principal-container {
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .theme-button-container {
+      position: absolute;
+      background-color: transparent;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+      .sun {
+        color: #fff;
+        font-size: 20px;
+      }
+      .sun:hover {
+        color: #eeee0a;
+        font-size: 21px;
+      }
+
+      .moon {
+        color: #000000b6;
+        font-size: 22px;
+      }
+
+      .moon:hover {
+        font-size: 24px;
+      }
+    }
+
+    .plus-button {
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 1px 0px 11px 5px rgba(195, 188, 188, 0.75);
+
+      margin: 0 auto;
+      background-color: #000;
+
+      i {
+        font-size: 19px;
+        color: #fff;
+      }
+
+      &--light {
+        box-shadow: 1px 0px 11px 1px rgba(22, 21, 21, 0.75);
+
+        background-color: #fff;
+
+        i {
+          color: #000;
+        }
+      }
+    }
+
+    .plus-button:hover {
+      box-shadow: 1px 0px 11px 5px rgba(99, 96, 96, 0.75);
+      background-color: #fff;
+      i {
+        font-size: 24px;
+        color: #000000b0;
+      }
+    }
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 40px;
+      margin: 20px auto 10px auto;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s all;
+
+      gap: 15px;
+
+      .email-button-container {
+        display: none;
+      }
+
+      .nav-item {
+        color: #fff;
+        cursor: pointer;
+        list-style: none;
+        font-family: "frankRuhl regular";
+        font-size: 18px;
+        padding: 7px;
+        border-bottom: 5px solid transparent;
+
+        &--light {
+          color: #000;
+        }
+
+        &--light:hover {
+          border-bottom: 5px solid #d962d784 !important ;
+        }
+      }
+
+      .nav-item:hover {
+        border-bottom: 5px solid #d6d018;
+
+        font-size: 20px;
+      }
+
+      &--active {
+        max-height: 400px;
+        transition: 0.5s all;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-principal-container {
+    .nav-content {
+      .theme-button-container {
+        right: 5px;
+        top: 50%;
+        cursor: pointer;
+        .sun {
+          color: #fff;
+          font-size: 22px;
+        }
+        .sun:hover {
+          color: #eeee0a;
+          font-size: 23px;
+        }
+
+        .moon {
+          color: #000;
+          font-size: 24px;
+        }
+
+        .moon:hover {
+          font-size: 25px;
+        }
+      }
+      .plus-button {
+        display: none;
+      }
+      .nav-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        right: 20px;
+        margin: 0;
+        width: 100%;
+        top: 0;
+        padding: 50px 0;
+        max-height: 100px;
+        gap: 10px;
+        .nav-item {
+          border-bottom: 5px solid transparent;
+
+          border-radius: 10px;
+          font-size: 19px;
+
+          &--light:hover {
+            background-color: #d962d784 !important;
+          }
+        }
+        .nav-item:hover {
+          background-color: #eeee0a;
+          color: #000;
+          box-shadow: 1px 0px 10px 0px #fff;
+          transform: rotate(8deg);
+          border-bottom: 5px solid transparent;
+        }
+
+        .email-button-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: auto;
+          margin-left: 40px;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+
+          background-color: transparent;
+          color: #fff;
+          i {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+          .email-text {
+            font-family: "frankRuhl regular";
+
+            font-size: 18px;
+          }
+
+          &--light {
+            i {
+              color: #000;
+            }
+            .email-text {
+              color: #000;
+            }
+          }
+
+          &--light:hover {
+            background-color: #d962d784 !important;
+          }
+        }
+
+        .email-button-container:hover {
+          background-color: #eeee0a;
+          color: #000;
+          box-shadow: 1px 0px 10px 0px #fff;
+          transform: rotate(6deg);
+          border-bottom: 0px solid transparent;
+        }
+      }
+    }
+  }
+}
