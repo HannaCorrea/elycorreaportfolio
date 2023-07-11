@@ -1,18 +1,8 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 import "./index.scss";
+import { useEffect } from "react";
 
 function NavBar({ menuActive, setMenuActive, darkMode, setDarkMode }) {
-  const menuItems = [
-    {
-      name: "Sobre mi",
-    },
-    {
-      name: "Conocimientos",
-    },
-    {
-      name: "Proyectos",
-    },
-  ];
   //FUNCTIONS//
   function handleMenu() {
     setMenuActive(!menuActive);
@@ -28,6 +18,15 @@ function NavBar({ menuActive, setMenuActive, darkMode, setDarkMode }) {
   return (
     <nav className="nav-principal-container" id="navbar">
       <div className="nav-content">
+        <Link
+          to={"/"}
+          className={`logoEC-container ${
+            darkMode === true ? "" : "logoEC-container--light"
+          }`}
+        >
+          <span className="e">E</span>
+          <span className="c">C</span>
+        </Link>
         <button
           onClick={() => handleMenu()}
           className={`plus-button ${
@@ -61,27 +60,22 @@ function NavBar({ menuActive, setMenuActive, darkMode, setDarkMode }) {
             <i className="fas fa-envelope"></i>
             <p className="email-text">hannagonz1997@gmail.com</p>
           </button>
-          {menuItems?.length > 0 &&
-            menuItems.map((item, i) => (
-              <li
-                key={i}
-                className={`nav-item ${
-                  darkMode === true ? "" : "nav-item--light"
-                }`}
-              >
-                <Link
-                  activeClass="active"
-                  to="section1"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  horizontal={true}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+
+          <li
+            className={`nav-item ${darkMode === true ? "" : "nav-item--light"}`}
+          >
+            <Link to={"/about-me"}>Sobre mí</Link>
+          </li>
+          <li
+            className={`nav-item ${darkMode === true ? "" : "nav-item--light"}`}
+          >
+            <Link to="/skills">Conocimientos</Link>
+          </li>
+          <li
+            className={`nav-item ${darkMode === true ? "" : "nav-item--light"}`}
+          >
+            <Link to="proyects">Proyectos</Link>
+          </li>
         </ul>
       </div>
     </nav>

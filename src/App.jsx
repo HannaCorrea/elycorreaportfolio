@@ -1,8 +1,10 @@
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import NavBar from "./components/navBar";
 import Works from "./pages/works";
 import { useState } from "react";
+import AboutMe from "./pages/aboutMe/index";
+import Footer from "./components/footer";
 
 function App() {
   //STATES//
@@ -11,14 +13,37 @@ function App() {
 
   return (
     <div className={`appDark ${darkMode === false ? "appDark--light" : ""}`}>
-      <NavBar
-        menuActive={menuActive}
-        setMenuActive={setMenuActive}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
-      {/* <Works id="section1" /> */}
-      <Home menuActive={menuActive} darkMode={darkMode} id="section2" />
+      <BrowserRouter>
+        <NavBar
+          menuActive={menuActive}
+          setMenuActive={setMenuActive}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                menuActive={menuActive}
+                setMenuActive={setMenuActive}
+                darkMode={darkMode}
+              />
+            }
+          />
+          <Route
+            path="/about-me"
+            element={
+              <AboutMe
+                setMenuActive={setMenuActive}
+                menuActive={menuActive}
+                darkMode={darkMode}
+              />
+            }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

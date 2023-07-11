@@ -1,28 +1,23 @@
 body {
   margin: 0;
-  background-image: url("../src/assets/images/ppback.jpg");
-  background-repeat: no-repeat;
-  background-position: cover;
-  padding: 60px 30px;
+  display: block;
+  justify-content: center;
+  overflow-x: hidden;
+
+  // background-color: #f7f2f2;
+  // padding: 60px 30px;
 
   .container {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0px 0px 17px -5px #a2a0a0;
-    // background-color: #00000080;
-    background-color: transparent;
-    // background-color: #aca4a47a;
+    box-shadow: 0px 0px 17px -5px #363434;
+    // background-color: transparent;
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    // // padding: 20px 50px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
+    display: block;
     .container {
       flex-direction: row;
       overflow: hidden;
@@ -31,21 +26,26 @@ body {
 }
 
 .appDark {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.406);
+  background-image: url("./assets/images/backblac.avif");
+  box-shadow: 1px 0px 5px 5px rgba(29, 28, 28, 0.456);
   color: #fff;
+  max-width: 1200px;
 
   &--light {
-    background-color: #ffffffbd;
+    background-image: url("./assets/images/whiteBack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: black;
-    border-radius: 10px;
   }
 }
 
 @media (min-width: 1024px) {
   .appDark {
-    padding: 40px;
+    width: 100%;
+    max-width: 100%;
+    // margin: 0 auto;
+
+    // padding: 40px;
   }
 }
 

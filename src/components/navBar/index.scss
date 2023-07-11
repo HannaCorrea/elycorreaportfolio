@@ -1,16 +1,87 @@
 .nav-principal-container {
+  padding: 40px 20px 20px 20px;
   .nav-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     width: 100%;
+    position: relative;
+    .logoEC-container {
+      display: flex;
+      margin-right: auto;
+      position: absolute;
+      z-index: 4;
+      cursor: pointer;
+      left: 10px;
+      width: 90px;
+      background-color: #e3e30c;
+      padding: 7px;
+      top: -13px;
+      border-radius: 50%;
+      font-family: "frankRuhl Medium";
+      border-color: #b9b937;
+      color: #fff;
+      box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0#000;
+      -webkit-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+
+      .e {
+        background: transparent;
+        font-size: 52px;
+        color: #000;
+        margin-left: 9px;
+      }
+      .c {
+        background: transparent;
+        text-shadow: 3px 5px 2px #ece1e1;
+        font-size: 47px;
+        position: absolute;
+        top: 25px;
+        z-index: -1;
+        right: 20px;
+        color: #010101;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px 0#b9b937 inset, 0 0 5px 2px #fff;
+        .e {
+          font-size: 53px;
+        }
+
+        .c {
+          font-size: 48px;
+
+          -webkit-text-stroke: 1px transparent;
+        }
+      }
+    }
+    .logoEC-container--light {
+      background-color: #d962d784;
+      border-color: #d962d784;
+      color: #000;
+      box-shadow: 0 0 40px 40px #000 inset, 0 0 0 0 #fff;
+
+      .e,
+      .c {
+        color: #fff;
+        text-shadow: 3px 5px 2px transparent;
+      }
+      .c,
+      .e:hover {
+        text-shadow: 1px solid transparent;
+        -webkit-text-stroke: 1px transparent;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px 0#9a0f98c7 inset, 0 0 5px 2px #fff;
+      }
+    }
 
     .theme-button-container {
       position: absolute;
       background-color: transparent;
       right: 5px;
-      top: 5px;
+      top: 10px;
       cursor: pointer;
       .sun {
         color: #fff;
@@ -84,7 +155,6 @@
       }
 
       .nav-item {
-        color: #fff;
         cursor: pointer;
         list-style: none;
         font-family: "frankRuhl regular";
@@ -92,8 +162,14 @@
         padding: 7px;
         border-bottom: 5px solid transparent;
 
+        a {
+          color: #fff;
+        }
+
         &--light {
-          color: #000;
+          a {
+            color: #000;
+          }
         }
 
         &--light:hover {
@@ -109,7 +185,7 @@
 
       &--active {
         max-height: 400px;
-        transition: 0.5s all;
+        transition: 1.5s all;
         justify-content: center;
         align-items: center;
       }
@@ -129,7 +205,7 @@
           font-size: 22px;
         }
         .sun:hover {
-          color: #eeee0a;
+          color: #b9b937;
           font-size: 23px;
         }
 
@@ -166,12 +242,16 @@
             background-color: #d962d784 !important;
           }
         }
+
         .nav-item:hover {
           background-color: #eeee0a;
-          color: #000;
-          box-shadow: 1px 0px 10px 0px #fff;
+          border-bottom: 5px solid #8b8b2d;
+
+          color: #000 !important;
           transform: rotate(8deg);
-          border-bottom: 5px solid transparent;
+          a {
+            color: #000;
+          }
         }
 
         .email-button-container {
@@ -179,21 +259,20 @@
           justify-content: center;
           align-items: center;
           margin-right: auto;
-          margin-left: 40px;
+          margin-left: 150px;
           padding: 10px;
           border-radius: 10px;
           cursor: pointer;
-
           background-color: transparent;
           color: #fff;
           i {
             margin-right: 10px;
-            font-size: 18px;
+            font-size: 21px;
           }
           .email-text {
             font-family: "frankRuhl regular";
 
-            font-size: 18px;
+            font-size: 21px;
           }
 
           &--light {
@@ -213,9 +292,11 @@
         .email-button-container:hover {
           background-color: #eeee0a;
           color: #000;
-          box-shadow: 1px 0px 10px 0px #fff;
           transform: rotate(6deg);
-          border-bottom: 0px solid transparent;
+          border-bottom: 5px solid #8b8b2d;
+        }
+        .email-button-container--light:hover {
+          border-bottom: 5px solid #d962d784 !important;
         }
       }
     }

@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import Photo from "../../assets/images/fotoPerfil.png";
 import "./index.scss";
 
-function Home({ id, menuActive, darkMode }) {
+function Home({ id, menuActive, darkMode, setMenuActive }) {
   // FUNCTION //
   function openDirection(text) {
     window.open(text);
   }
+
+  useEffect(() => {
+    if (menuActive) {
+      setMenuActive(false);
+    }
+  }, []);
   return (
     <section
       className={`home-principal-container ${

@@ -1,0 +1,133 @@
+.footer-principal-container {
+  width: 100%;
+  margin-top: 100px;
+  height: 190px;
+  padding: 30px;
+  background-color: #fff;
+  position: relative;
+
+  .circle {
+    width: 120px;
+    height: 90px;
+    cursor: pointer;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: -40px;
+    transition: 0.2s all;
+    left: 35%;
+    border-top-left-radius: 53px;
+    border-top-right-radius: 53px;
+    i {
+      color: #000;
+      font-size: 45px;
+    }
+  }
+
+  .circle:hover {
+    top: -50px;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    width: 100%;
+
+    .menu-item {
+      cursor: pointer;
+      list-style: none;
+      font-family: "frankRuhl regular";
+      font-size: 18px;
+      color: #000;
+      padding: 7px;
+      border-bottom: 5px solid transparent;
+
+      &--light {
+        a {
+          color: #000;
+        }
+      }
+
+      &--light:hover {
+        border-bottom: 5px solid #d962d784 !important ;
+      }
+    }
+
+    .menu-item:hover {
+      border-bottom: 5px solid #d6d018;
+
+      font-size: 20px;
+    }
+
+    &--active {
+      max-height: 400px;
+      transition: 1.5s all;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .media-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+    button {
+      cursor: pointer;
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .email {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: "frankRuhl regular";
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-principal-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    .circle {
+      left: 50%;
+    }
+
+    .menu-container {
+      justify-content: flex-start;
+      gap: 15px;
+      width: 40%;
+      margin-left: 50px;
+      .menu-item {
+        font-size: 20px;
+      }
+    }
+
+    .media-container {
+      gap: 20px;
+      button {
+        background-color: transparent;
+
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .email {
+    font-size: 30px;
+  }
+}

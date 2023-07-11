@@ -1,0 +1,549 @@
+.aboutMe-principal-container {
+  padding: 50px 0 50px 0;
+  transition: 1s all;
+  .title {
+    font-family: "frankRuhl regular";
+    text-align: center;
+    margin: 0px 0 30px 0;
+    font-size: 30px;
+  }
+
+  .aboutMe-content {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/about.png");
+    background-size: contain;
+
+    align-items: center;
+    border-radius: 10px;
+
+    .as-developer {
+      background-color: #f4ebeba0;
+      padding: 15px;
+      max-width: 477px;
+      border: 1px solid#686c6d33;
+      margin: 20px 20px 20px auto;
+      box-shadow: inset 0px -2px 10px #1414141a, 8px 8px #a5a8abad;
+
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: -30px;
+      .sub-dev {
+        color: #000;
+        font-family: "frankRuhl regular";
+        font-size: 18px;
+        padding: 5px 5px 5px 2px;
+      }
+
+      .dev-description {
+        font-family: "frankRuhl light";
+        font-size: 16px;
+        color: #000;
+        text-align: justify;
+      }
+    }
+
+    .second {
+      display: none;
+    }
+    .secondPerson {
+      display: none;
+    }
+    .photos-principal-container {
+      display: none;
+    }
+
+    .as-person {
+      background-color: #f4ebeba0;
+      padding: 15px;
+      max-width: 477px;
+
+      border: 1px solid#686c6d33;
+      margin: 60px 20px 20px auto;
+      box-shadow: inset 0px -2px 10px #1414141a, 8px 8px #a5a8abad;
+
+      border-top-left-radius: -30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+      .sub-person {
+        font-family: "frankRuhl regular";
+        font-size: 18px;
+        color: #000;
+      }
+
+      .person-description {
+        font-family: "frankRuhl light";
+        font-size: 16px;
+        color: #000;
+        text-align: justify;
+      }
+    }
+  }
+  .skills-principal-container {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 20px 20px 20px;
+    font-family: "frankRuhl regular";
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px;
+    }
+
+    .skills-items-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 20px 20px;
+      box-shadow: -9px 8px #21232469;
+
+      width: 100%;
+      .skill-item {
+        display: flex;
+        height: 25px;
+        width: 100%;
+        margin-top: 30px;
+        .html,
+        .css,
+        .javascript,
+        .react {
+          display: flex;
+        }
+
+        .color {
+          align-items: center;
+          text-align: center;
+          height: 30px;
+          padding: 5px;
+          font-size: 18px;
+          background-color: #fff;
+        }
+
+        .spanHtml {
+          width: 90%;
+          display: flex;
+          padding: 5px 0 5px 8px;
+          justify-content: space-between;
+          align-items: center;
+          background-image: url("../../assets/images/htmlCo.jpg");
+          animation-duration: 3s;
+          animation-name: slideinHtml;
+
+          @keyframes slideinHtml {
+            from {
+              margin-right: 100%;
+              width: 300%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 90%;
+            }
+          }
+        }
+
+        .spanCss {
+          width: 90%;
+          display: flex;
+          padding: 5px 0 5px 8px;
+
+          align-items: center;
+          justify-content: space-between;
+          background-image: url("../../assets/images/cssCol.avif");
+          animation-duration: 5s;
+          animation-name: slideinCss;
+
+          @keyframes slideinCss {
+            from {
+              margin-right: 100%;
+              width: 300%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 90%;
+            }
+          }
+        }
+
+        .spanJs {
+          background-image: url("../../assets/images/naran.jpg");
+          animation-duration: 5s;
+          padding: 5px 0 5px 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          animation-name: slideinJs;
+          width: 60%;
+          @keyframes slideinJs {
+            from {
+              margin-right: 100%;
+              width: 90%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 60%;
+            }
+          }
+        }
+
+        .spanReact {
+          padding: 5px 0 5px 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-image: url("../../assets/images/verdeCol.webp");
+          animation-duration: 5s;
+          animation-name: slideinReact;
+          width: 70%;
+          @keyframes slideinReact {
+            from {
+              margin-right: 100%;
+              width: 90%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 70%;
+            }
+          }
+        }
+        .spanJira {
+          width: 90%;
+          display: flex;
+          padding: 5px 0 5px 8px;
+          justify-content: space-between;
+          align-items: center;
+          background-image: url("../../assets/images/lilaBack.avif");
+          animation-duration: 3s;
+          animation-name: slideinHtml;
+
+          @keyframes slideinHtml {
+            from {
+              margin-right: 100%;
+              width: 300%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 90%;
+            }
+          }
+        }
+        .spanBbk {
+          width: 90%;
+          display: flex;
+          padding: 5px 0 5px 8px;
+          justify-content: space-between;
+          align-items: center;
+          background-image: url("../../assets/images/redback.jpeg");
+          animation-duration: 3s;
+          animation-name: slideinHtml;
+
+          @keyframes slideinHtml {
+            from {
+              margin-right: 100%;
+              width: 300%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    .developer-girl-container {
+      width: 100%;
+      min-width: 300px;
+      max-width: 300px;
+      margin-left: auto;
+      padding: 200px 30px 50px 30px;
+      position: relative;
+
+      .girldev {
+        width: 100%;
+        transform: scaleX(-1);
+      }
+      .jsdev {
+        position: absolute;
+        width: 20%;
+        min-width: 65px;
+        max-width: 78px;
+        top: 120px;
+        transform: rotate(-20deg);
+        left: 10px;
+      }
+      .cssdev {
+        position: absolute;
+        width: 30%;
+        top: 50px;
+        min-width: 65px;
+        max-width: 118px;
+        left: 100px;
+      }
+      .reactdev {
+        position: absolute;
+        width: 25%;
+        top: 170px;
+        min-width: 65px;
+        max-width: 98px;
+        left: 170px;
+      }
+      .htmldev {
+        position: absolute;
+        min-width: 65px;
+        width: 20%;
+        top: 250px;
+        max-width: 78px;
+        left: 85%;
+      }
+
+      .gitdev {
+        position: absolute;
+        width: 20%;
+        min-width: 65px;
+        top: 100px;
+        max-width: 78px;
+        right: 20px;
+      }
+    }
+  }
+
+  .my-history-container {
+    padding: 20px;
+  }
+
+  &--menuActive {
+    padding-top: 190px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutMe-principal-container {
+    padding-top: 200px;
+    width: 100%;
+    .title {
+      margin-bottom: 80px;
+      font-size: 50px;
+    }
+    .aboutMe-content {
+      position: relative;
+      width: 100%;
+      background-image: none;
+
+      .photos-principal-container {
+        display: flex;
+        contain: "";
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        max-width: 1200px;
+
+        height: 800px;
+
+        .description1 {
+          position: absolute;
+          width: 45%;
+          max-width: 600px;
+          border-radius: 50%;
+          left: 270px;
+          animation-duration: 7s;
+          height: 70%;
+          max-height: 700px;
+          z-index: 2;
+          background-image: url("../../assets/images/about.png");
+          background-size: 60% 100%;
+          background-repeat: no-repeat;
+        }
+        .description2 {
+          width: 30%;
+          max-width: 350px;
+          height: 350px;
+          position: absolute;
+          border-radius: 50%;
+          bottom: 150px;
+          animation-duration: 8s;
+          right: 300px;
+          background-image: url("../../assets/images/laugh.jpeg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .description3 {
+          width: 25%;
+          max-width: 300px;
+          height: 300px;
+          position: absolute;
+          border-radius: 50%;
+          right: 320px;
+          animation-duration: 2s;
+          top: 30px;
+          background-image: url("../../assets/images/photoBack.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .about-photo {
+        display: flex;
+        width: 30%;
+        border-radius: 30px;
+      }
+
+      .as-developer {
+        top: -150px;
+        max-width: 300px;
+        left: 25px;
+        z-index: 3;
+        animation-duration: 1s;
+        animation-name: slidein1;
+        position: absolute;
+        background-color: #fffafad2;
+        border: 2px solid #fff6cd;
+      }
+
+      @keyframes slidein1 {
+        from {
+          margin-left: -100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+      .second {
+        display: block;
+        top: 250px;
+        z-index: 3;
+        left: 70px;
+        background-image: url("../../assets/images/yellowBack.avif");
+        border-top-left-radius: 30px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        animation-duration: 1.5s;
+        animation-name: slidein;
+      }
+      @keyframes slidein {
+        from {
+          margin-left: -100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+      .as-person {
+        position: absolute;
+        max-width: 300px;
+        right: 70px;
+        top: -80px;
+        z-index: 3;
+        animation-duration: 1s;
+        animation-name: slidein2;
+        background-color: #fffafad2;
+        border: 2px solid #b59ae7;
+        @keyframes slidein2 {
+          from {
+            margin-right: -100%;
+            width: 300%;
+          }
+
+          to {
+            margin-right: 0%;
+            width: 100%;
+          }
+        }
+      }
+
+      .secondPerson {
+        display: block;
+        bottom: 200px;
+        z-index: 3;
+        top: 280px;
+        right: 0;
+        height: 200px;
+        background-image: url("../../assets/images/lilaBack.avif");
+        border-top-left-radius: 0px;
+        border-top-right-radius: 30;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        animation-duration: 2s;
+        animation-name: slidein3;
+
+        @keyframes slidein3 {
+          from {
+            margin-right: -100%;
+            width: 300%;
+          }
+
+          to {
+            margin-right: 0%;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .skills-principal-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 700px;
+      h1 {
+        margin-top: 80px;
+        width: 100%;
+        font-size: 50px;
+      }
+
+      .skills-items-container {
+        width: 50%;
+        height: 70%;
+        padding: 50px 20px 50px 20px;
+        margin: 40px 0 0 0;
+
+        .skill-item {
+          height: 30px;
+        }
+      }
+      .developer-girl-container {
+        padding: 150px 30px 200px 30px;
+        margin-right: 80px;
+        max-width: 400px;
+
+        .jsdev {
+          top: 82px;
+          left: -20px;
+        }
+
+        .cssdev {
+          top: 20px;
+        }
+
+        .reactdev {
+          top: 10px;
+          left: 230px;
+        }
+
+        .gitdev {
+          right: -30px;
+        }
+      }
+    }
+  }
+}
